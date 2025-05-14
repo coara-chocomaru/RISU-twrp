@@ -25,6 +25,24 @@ PRODUCT_MANUFACTURER := kte
 
 PRODUCT_GMS_CLIENTID_BASE := android-kte
 
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.build.product=tb8168p1_64_l_d4x_xuezhiyou_bsp \
+    ro.product.board=tb8168p1_64_l_d4x_xuezhiyou_bsp \
+    ro.product.device=tb8168p1_64_l_d4x_xuezhiyou_bsp \
+    ro.product.model=For_Your_Enhancement_01 \
+    ro.product.locale=ja-JP \
+    ro.build.system_root_image=no \
+    persist.sys.locale=ja-JP \
+    ro.treble.enabled=true \
+    ro.build.characteristics=tablet \
+    ro.product.first_api_level=29 \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.vibration=false \
+    ro.hardware.vibrator=none \
+    persist.sys.usb.config=mtp,adb \
+    ro.usb.config=mtp,adb
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="full_tb8168p1_64_l_d4x_xuezhiyou_bsp-user 10 QP1A.190711.020 mp3V457 release-keys"
 
