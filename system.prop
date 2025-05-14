@@ -14,5 +14,7 @@ ro.mediatek.platform=MT8168
 ro.crypto.volume.filenames_mode=aes-256-cts
 persist.service.adb.enable=1
 persist.service.debuggable=1
+persist.sys.vibration=false
+ro.hardware.vibrator=none
 persist.sys.usb.config=mtp,adb
 ro.usb.config=mtp,adb
