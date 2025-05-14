@@ -23,7 +23,7 @@ TARGET_OTA_ASSERT_DEVICE := For_Your_Enhancement_01
 AB_OTA_UPDATER := false
 
 # APEX
-OVERRIDE_TARGET_FLATTEN_APEX := false
+OVERRIDE_TARGET_FLATTEN_APEX := true
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
