@@ -18,7 +18,7 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/kte/foryourenhancement01/device.mk)
 
 PRODUCT_DEVICE := tb8168p1_64_l_d4x_xuezhiyou_bsp
-PRODUCT_NAME := omni_foryourenhancement01
+PRODUCT_NAME := twrp_foryourenhancement01
 PRODUCT_BRAND := KingTop
 PRODUCT_MODEL := For_Your_Enhancement_01
 PRODUCT_MANUFACTURER := kte
