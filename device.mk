@@ -16,6 +16,7 @@ PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-service
 
 PRODUCT_PACKAGES += \
+    bootctrl.mt8168 \
     android.hardware.fastboot@1.0-impl-mock \
     fastbootd
 
