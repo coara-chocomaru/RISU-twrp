@@ -8,8 +8,8 @@
 
 set -e
 
-DEVICE=a05ba
-VENDOR=sts
+DEVICE=foryourenhancement01
+VENDOR=kte
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
