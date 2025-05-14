@@ -30,14 +30,3 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.build.product=tb8168p1_64_l_d4x_xuezhiyou_bsp \
-    ro.product.board=tb8168p1_64_l_d4x_xuezhiyou_bsp \
-    ro.product.device=tb8168p1_64_l_d4x_xuezhiyou_bsp \
-    ro.product.model=For_Your_Enhancement_01 \
-    ro.product.locale=ja-JP \
-    ro.build.system_root_image=no \
-    persist.sys.locale=ja-JP \
-    ro.treble.enabled=true \
-    ro.build.characteristics=tablet \
-    ro.product.first_api_level=29
