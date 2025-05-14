@@ -10,7 +10,7 @@ on:
       MANIFEST_BRANCH:
         description: 'TWRP Manifest Branch'
         required: true
-        default: 'twrp-10.0'
+        default: 'twrp-10.0-deprecated'
       DEVICE_TREE:
         description: 'TWRP Device Tree'
         required: true
