@@ -1,3 +1,7 @@
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
+ro.boot.dynamic_partitions=true
 ro.boot.avb_version=1.1
 ro.boot.vbmeta.avb_version=1.1
 ro.boot.vbmeta.device_state=unlocked
@@ -8,3 +12,7 @@ ro.boot.hardware=mt8168
 ro.board.platform=mt8168
 ro.mediatek.platform=MT8168
 ro.crypto.volume.filenames_mode=aes-256-cts
+persist.service.adb.enable=1
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
+ro.usb.config=mtp,adb
