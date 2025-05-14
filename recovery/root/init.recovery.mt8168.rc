@@ -5,6 +5,53 @@ on init
     mkdir /config
 		setprop sys.usb.configfs 1
 		setprop sys.usb.controller "11201000.usb"
+    mkdir /vendor/lib64 0777 root root
+    mkdir /vendor/lib64/hw 0777 root root
+    start hwservicemanager
+    setprop crypto.ready 1
+
+service hwservicemanager /system/bin/hwservicemanager
+    user root
+    group root
+    disabled
+    onrestart setprop hwservicemanager.ready false
+    seclabel u:r:recovery:s0
+
+service servicemanager /system/bin/servicemanager
+    user root
+    group root readproc
+    disabled
+    seclabel u:r:recovery:s0
+
+service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service keymaster-3-0  /system/bin/android.hardware.keymaster@3.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+service keymaster-4-0  /system/bin/android.hardware.keymaster@4.0-service
+    user root
+    group root
+    disabled
+    seclabel u:r:recovery:s0
+
+on property:crypto.ready=0
+    stop keymaster-3-0
+    stop keymaster-4-0
+    stop gatekeeper-1-0
+    stop servicemanager
+
+on property:vendor.sys.listeners.registered=true
+    start keymaster-3-0
+    start keymaster-4-0
+    start gatekeeper-1-0
+    start servicemanager
 
 on fs
     symlink /dev/block/platform/soc/11230000.mmc /dev/block/platform/bootdevice
