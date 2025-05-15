@@ -35,6 +35,9 @@ on init
     mkdir /acct/uid
 
     mkdir /system
+    mkdir /system_image
+    mkdir /vendor_image
+    mkdir /product_image
     mkdir /data
     mkdir /cache
     mkdir /sideload
