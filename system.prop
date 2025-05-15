@@ -7,4 +7,3 @@ ro.boot.veritymode=disabled
 ro.boot.hardware=mt8168
 ro.board.platform=mt8168
 ro.mediatek.platform=MT8168
-ro.crypto.volume.filenames_mode=aes-256-xts
