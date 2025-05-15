@@ -12,3 +12,6 @@ ro.boot.hardware=mt8168
 ro.board.platform=mt8168
 ro.mediatek.platform=MT8168
 ro.crypto.volume.filenames_mode=aes-256-cts
+persist.service.adb.enable=1                                                    
+persist.service.debuggable=1
+persist.sys.usb.config=mtp,adb
