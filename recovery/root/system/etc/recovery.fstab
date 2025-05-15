@@ -1,8 +1,4 @@
-# Dynamic partitions
-/system				    ext4		/dev/block/dm-2              flags=backup=1;display="System"
-/product        	ext4		/dev/block/dm-1              flags=backup=1;display="Product"
-/vendor				    ext4		/dev/block/dm-0              flags=backup=1;display="Vendor"
-/product_image	  emmc		/dev/block/mapper/product	   flags=backup=1;display="Product Image";flashimg=1
-/super          	emmc    /dev/block/by-name/super     flags=backup=1;display="Super_image";flashimg=1
-/system_image	    emmc		/dev/block/mapper/system    flags=backup=1;display="System Image";flashimg=1
-/vendor_image	    emmc		/dev/block/mapper/vendor    flags=backup=1;display="Vendor Image";flashimg=1
+system /system ext4 ro wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+vendor /vendor ext4 ro wait,,avb,logical,first_stage_mount
+product /product ext4 ro wait,,avb,logical,first_stage_mount
+
