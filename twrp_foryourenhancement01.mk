@@ -39,6 +39,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 　　 ro.bluetooth.enable=false \
     ro.boot.wifi=false \
     wifi.interface=none \
+    persist.sys.usb.config=mtp \
     ro.hardware.vibrator=none
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
