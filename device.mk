@@ -10,6 +10,15 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_TARGET_VNDK_VERSION := 29
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+#　Network
+PRODUCT_PACKAGES -= \
+    wpa_supplicant \
+    hostapd \
+    bluetooth \
+    bluez \
+    libbluetooth_jni \
+    com.android.bluetooth
+
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.0-impl \
