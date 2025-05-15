@@ -28,10 +28,6 @@ product /product ext4 rw wait,,avb,logical,first_stage_mount
 /dev/block/platform/bootdevice/by-name/cache /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
 
 
-/dev/block/platform/bootdevice/by-name/nvdata /mnt/vendor/nvdata ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
-/dev/block/platform/bootdevice/by-name/nvcfg /mnt/vendor/nvcfg ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
-
-
 
 
 
@@ -61,8 +57,6 @@ product /product ext4 rw wait,,avb,logical,first_stage_mount
 
 /dev/block/platform/bootdevice/by-name/vbmeta /vbmeta emmc defaults defaults
 # 216 "vendor/mediatek/proprietary/hardware/fstab/mt8168/fstab.in.mt8168"
-/devices/platform/soc/11240000.mmc* auto vfat defaults voldmanaged=sdcard1:auto,encryptable=userdata
-/devices/platform/soc/11201000.usb* auto vfat defaults voldmanaged=usbotg:auto,encryptable=userdata
 
 
 /dev/block/platform/bootdevice/by-name/nvram /nvram emmc defaults defaults
