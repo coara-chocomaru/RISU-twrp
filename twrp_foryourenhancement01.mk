@@ -35,8 +35,6 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.treble.enabled=true \
     ro.build.characteristics=tablet \
     ro.product.first_api_level=29 \
-    persist.service.adb.enable=1 \
-    persist.service.debuggable=1 \
     persist.sys.vibration=false \
     ro.hardware.vibrator=none
 
