@@ -6,24 +6,24 @@
 # 1 "<built-in>" 2
 # 1 "vendor/mediatek/proprietary/hardware/fstab/mt8168/fstab.in.mt8168" 2
 # 98 "vendor/mediatek/proprietary/hardware/fstab/mt8168/fstab.in.mt8168"
-system /system ext4 rw wait,,avb=vbmeta_system,logical,first_stage_mount,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
+system /system ext4 rw wait,logical,avb_keys=/avb/q-gsi.avbpubkey:/avb/r-gsi.avbpubkey:/avb/s-gsi.avbpubkey
 
 
-vendor /vendor ext4 rw wait,,avb,logical,first_stage_mount
-
-
-
-product /product ext4 rw wait,,avb,logical,first_stage_mount
+vendor /vendor ext4 rw wait,avb,logical
 
 
 
+product /product ext4 rw wait,avb,logical
 
 
 
 
-/dev/block/platform/bootdevice/by-name/md_udc /metadata ext4 noatime,nosuid,nodev,discard wait,formattable,first_stage_mount
+
+
+
+/dev/block/platform/bootdevice/by-name/md_udc /metadata ext4 rw
 # 134 "vendor/mediatek/proprietary/hardware/fstab/mt8168/fstab.in.mt8168"
-/dev/block/platform/bootdevice/by-name/userdata /data ext4 noatime,nosuid,nodev,noauto_da_alloc wait,check,formattable,quota,resize,reservedsize=128m,checkpoint=block,fileencryption=aes-256-xts
+/dev/block/platform/bootdevice/by-name/userdata /data ext4 noatime,nosuid,nodev,noauto_da_alloc wait,check,formattable,resize,fileencryption=aes-256-xts
 # 143 "vendor/mediatek/proprietary/hardware/fstab/mt8168/fstab.in.mt8168"
 /dev/block/platform/bootdevice/by-name/cache /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
 
@@ -38,16 +38,16 @@ product /product ext4 rw wait,,avb,logical,first_stage_mount
 
 
 
-/dev/block/platform/bootdevice/by-name/recovery /recovery emmc defaults first_stage_mount,nofail,
+/dev/block/platform/bootdevice/by-name/recovery /recovery emmc
 
-/dev/block/platform/bootdevice/by-name/boot /boot emmc defaults first_stage_mount,nofail,
-
-
+/dev/block/platform/bootdevice/by-name/boot /boot emmc
 
 
 
-/dev/block/platform/bootdevice/by-name/vbmeta_vendor /vbmeta_vendor emmc defaults first_stage_mount,nofail,
-/dev/block/platform/bootdevice/by-name/vbmeta_system /vbmeta_system emmc defaults first_stage_mount,nofail,,avb=vbmeta
+
+
+/dev/block/platform/bootdevice/by-name/vbmeta_vendor /vbmeta_vendor emmc
+/dev/block/platform/bootdevice/by-name/vbmeta_system /vbmeta_system emmc
 
 
 
