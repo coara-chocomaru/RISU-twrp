@@ -131,7 +131,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_FRAMEBUFFER_ALPHA_CHANNEL := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_DISABLE_TRIPLE_BUFFERING := false
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/twrp.fstab
 
 # VINTF
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/recovery/root/vendor/etc/vintf/manifest.xml
