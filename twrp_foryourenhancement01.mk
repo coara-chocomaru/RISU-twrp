@@ -38,6 +38,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.vibration=false \
     ro.boot.dynamic_partitions=true \
     ro.dynamic.full_size=2818572288 \
+　　 ro.bluetooth.enable=false \
+    ro.boot.wifi=false \
+    wifi.interface=none \
     ro.hardware.vibrator=none
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
