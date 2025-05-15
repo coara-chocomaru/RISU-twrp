@@ -36,6 +36,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.build.characteristics=tablet \
     ro.product.first_api_level=29 \
     persist.sys.vibration=false \
+    ro.boot.dynamic_partitions=true \
     ro.hardware.vibrator=none
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
