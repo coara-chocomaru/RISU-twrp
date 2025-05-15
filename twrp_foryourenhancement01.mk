@@ -39,9 +39,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
     persist.sys.vibration=false \
-    ro.hardware.vibrator=none \
-    persist.sys.usb.config=mtp,adb \
-    ro.usb.config=mtp,adb
+    ro.hardware.vibrator=none
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="full_tb8168p1_64_l_d4x_xuezhiyou_bsp-user 10 QP1A.190711.020 mp3V457 release-keys"
