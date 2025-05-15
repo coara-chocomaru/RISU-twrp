@@ -1,4 +1,4 @@
-/system                   ext4     system                               flags=display="system";logical;slotselect;backup=1;wipeingui;flashimg
+/system_root              ext4     system                               flags=display="system";logical;slotselect;backup=1;wipeingui;flashimg
 /vendor                   ext4     vendor                               flags=display="vendor";logical;slotselect;backup=1;wipeingui;flashimg
 /product                  ext4     product                              flags=display="product";logical;slotselect;backup=1;wipeingui;flashimg
 /super			              emmc     /dev/block/by-name/super		          flags=display="super";backup=1;wipeingui;flashimg=1
