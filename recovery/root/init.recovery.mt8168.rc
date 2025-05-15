@@ -10,6 +10,13 @@ on init
     start hwservicemanager
     setprop crypto.ready 1
 
+service set_permissive /system/bin/set_permissive.sh
+    user root
+    group root
+    disabled
+    oneshot 
+    seclabel u:r:recovery:s0
+    
 service hwservicemanager /system/bin/hwservicemanager
     user root
     group root
@@ -29,12 +36,6 @@ service gatekeeper-1-0 /system/bin/android.hardware.gatekeeper@1.0-service
     disabled
     seclabel u:r:recovery:s0
 
-service keymaster-3-0  /system/bin/android.hardware.keymaster@3.0-service
-    user root
-    group root
-    disabled
-    seclabel u:r:recovery:s0
-
 service keymaster-4-0  /system/bin/android.hardware.keymaster@4.0-service
     user root
     group root
@@ -42,30 +43,14 @@ service keymaster-4-0  /system/bin/android.hardware.keymaster@4.0-service
     seclabel u:r:recovery:s0
 
 on property:crypto.ready=0
-    stop keymaster-3-0
     stop keymaster-4-0
     stop gatekeeper-1-0
     stop servicemanager
 
 on property:vendor.sys.listeners.registered=true
-    start keymaster-3-0
     start keymaster-4-0
     start gatekeeper-1-0
     start servicemanager
-
-service set_permissive /system/bin/set_permissive.sh
-    user root
-    group root
-    disabled
-    oneshot 
-    seclabel u:r:recovery:s0
-    
- service overrideprops /system/bin/overrideprops.sh
-    user root
-    group root
-    disabled
-    oneshot
-    seclabel u:r:recovery:s0
 
 on fs
     symlink /dev/block/platform/soc/11230000.mmc /dev/block/platform/bootdevice
