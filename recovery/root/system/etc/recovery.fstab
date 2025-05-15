@@ -1,5 +1,5 @@
-system /dev/block/dm-2 ext4 rw wait
-vendor /dev/block/dm-0 ext4 rw wait
-product /dev/block/dm-1 ext4 rw wait
+system /system_root ext4 rw wait
+vendor /vendor ext4 rw wait
+product /product ext4 rw wait
 
 /dev/block/platform/bootdevice/by-name/cache /cache ext4 noatime,nosuid,nodev,noauto_da_alloc,discard wait,check,formattable
