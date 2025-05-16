@@ -1,4 +1,7 @@
-on boot
+on early-init
+    wait /dev/.coldboot_done 1000
+
+on fs
     setprop vendor.usb.vid "0x0E8D"
     mkdir /dev/usb-ffs 0770 shell shell
     mkdir /dev/usb-ffs/adb 0770 shell shell
